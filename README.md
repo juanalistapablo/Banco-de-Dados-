@@ -10,7 +10,9 @@
 ### Engenharia da Computação  
 ### Disciplina: EECP0053 – **EECP0004 - BANCO DE DADOS**  
 *DISCENTE*:**JUAN PABLO F. M. MACEDO**
+
 **E-mail:** <juan.mondego@discente.ufma.br>  
+
 **Semestre:** 2025.1  
 
 ---
