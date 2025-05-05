@@ -1,4 +1,4 @@
-# Repositorio –  **PARADIGMAS DE PROGRAMAÇÃO**
+# Repositorio –  **BANCO DE DADOS**
 
 ---
 
