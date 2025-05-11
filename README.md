@@ -9,7 +9,7 @@
 ## Universidade Federal do Maranhão  
 ### Engenharia da Computação  
 ### Disciplina: EECP0053 – **EECP0004 - BANCO DE DADOS**  
-*DISCENTEs*:**JUAN PABLO F. M. MACEDO, NOAM WILLYAN DE ARAUJO COSTA, MATHEUS DONAVAN CARVALHO SOUSA **
+*DISCENTES*:**JUAN PABLO F. M. MACEDO, NOAM WILLYAN DE ARAUJO COSTA, MATHEUS DONAVAN CARVALHO SOUSA **
 
 **E-mail:** <juan.mondego@discente.ufma.br>  
 
