@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório de modelagem de dados da empresa B&D! Este projeto tem como objetivo apresentar o Diagrama Entidade-Relacionamento (DER) baseado em um estudo de caso empresarial.
 
-## 📄 Sobre o Projeto
+## 📄 Sobre o Projeto ( 02/05/2025)
 Neste repositório, desenvolvemos o modelo conceitual (DER) para automatizar os processos da empresa B&D, conforme especificado na atividade da disciplina de Banco de Dados. A modelagem foi feita com base nos conceitos de Entidades, Relacionamentos, Atributos e Regras de Cardinalidade.
 
 ## 🧩 Componentes do Sistema
