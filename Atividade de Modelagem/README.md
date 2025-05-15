@@ -1,5 +1,5 @@
-# Projeto de Banco de Dados – Engenharia da Computação  
-**Universidade Federal do Maranhão (UFMA)**  
+# Projeto de Banco de Dados – Engenharia da Computação  **Universidade Federal do Maranhão (UFMA)**  
+
 
 ## 📌 Apresentação do Projeto  
 Este projeto foi desenvolvido como parte da disciplina de Banco de Dados, do curso de Engenharia da Computação na Universidade Federal do Maranhão (UFMA). O principal objetivo é aplicar os conhecimentos teóricos e práticos adquiridos em sala na modelagem, estruturação e manipulação de um banco de dados relacional.
