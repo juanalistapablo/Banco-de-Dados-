@@ -1,2 +1,7 @@
 /*======================================================  Utilizando o comando SELECT =======================================================================*/
 
+/*visualisar tabela */
+1) SELECT*FROM tabelafornecedores
+
+/* visualisar tabela de uma coluna */
+2) SELECT*FROM tabelafornecedores WHERE país_de_origem = 'China' 
