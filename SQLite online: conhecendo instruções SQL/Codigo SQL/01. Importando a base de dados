@@ -1,7 +1,22 @@
 /*======================================================  Utilizando o comando SELECT =======================================================================*/
 
 /*visualisar tabela */
-1) SELECT*FROM tabelafornecedores
+ SELECT*FROM tabelafornecedores;
 
 /* visualisar tabela de uma coluna */
-2) SELECT*FROM tabelafornecedores WHERE país_de_origem = 'China' 
+
+SELECT*FROM tabelafornecedores WHERE país_de_origem = 'China'; 
+
+/* não ter clientes repetidos*/
+
+select distinct cliente from tabelapedidos;
+
+/*Criando tabelas - CREATE TABLE*/
+
+CREATE table tabelaclientes (
+id_clientes INT PRIMARY KEY,
+Nome_Cliente VARCHAR (250),
+informacoes_de_contato VARCHAR (250)
+);
+
+SELECT * FROM tabelaclientes;
