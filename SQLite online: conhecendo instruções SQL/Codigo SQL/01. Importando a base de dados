@@ -20,3 +20,11 @@ informacoes_de_contato VARCHAR (250)
 );
 
 SELECT * FROM tabelaclientes;
+
+/* Alterar tabela == Adic coluna */
+
+alter table tabelaclientes add Endereço_cliente VARCHAR(250);
+
+/* Apagar tabela */
+
+DROP TABLE tabeladeclientes; //tambem para um bnaco de dados inteiro
