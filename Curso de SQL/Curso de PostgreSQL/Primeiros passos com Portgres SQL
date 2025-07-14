@@ -8,3 +8,22 @@ CREATE DATABASE "Alura"
     LOCALE_PROVIDER = 'libc'
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
+
+// Types no Portgres :
+
+https://www.postgresql.org/docs/current/datatype.html
+// Types masis usados ,: 
+integer
+real
+serial
+numeric
+
+varchar(n)
+char(n)
+text
+
+boolean
+
+date
+time
+timestamp
