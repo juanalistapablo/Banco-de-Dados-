@@ -1,5 +1,5 @@
 
-// CRIANDO UMA DATA BASE : 
+/* CRIANDO UMA DATA BASE : */
 
 CREATE DATABASE "Alura"
     WITH
@@ -9,7 +9,7 @@ CREATE DATABASE "Alura"
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
-// Types no Portgres :
+/* Types no Portgres :*/
 
 https://www.postgresql.org/docs/current/datatype.html
 // Types masis usados ,: 
@@ -27,3 +27,21 @@ boolean
 date
 time
 timestamp
+
+/*  CRIANDO TABELAS : */
+
+CREATE TABLE aluno(
+    id SERIAL,
+        nome VARCHAR(255),
+        cpf CHAR(11),
+        observacao TEXT,
+        idade INTEGER,
+        dinheiro NUMERIC(10,2),
+        altura REAL,
+        ativo BOOLEAN,
+        data_nascimento DATE,
+        hora_aula TIME,
+        matriculado_em TIMESTAMP
+);
+/* VISUALIZANDO TABELAS CRIADAS*/
+SELECT*FROM aluno;
