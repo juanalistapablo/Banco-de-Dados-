@@ -1,0 +1,59 @@
+/* CRIANDO UMA DATA BASE : */
+
+CREATE DATABASE "loja"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LOCALE_PROVIDER = 'libc'
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+-- Criação da tabela de clientes
+CREATE TABLE clientes (
+    cliente_id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    telefone VARCHAR(20)
+);
+
+-- Criação da tabela de categorias
+CREATE TABLE categorias (
+    categoria_id SERIAL PRIMARY KEY,
+    nome VARCHAR(50),
+    descricao TEXT
+);
+
+-- Criação da tabela de produtos
+CREATE TABLE produtos (
+    produto_id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    descricao TEXT,
+    preco DECIMAL(10, 2),
+    categoria_id INT REFERENCES categorias(categoria_id)
+);
+
+-- Criação da tabela de vendas
+CREATE TABLE vendas (
+    venda_id SERIAL PRIMARY KEY,
+    cliente_id INT REFERENCES clientes(cliente_id),
+    data_venda DATE,
+    valor_total DECIMAL(10, 2)
+);
+
+-- Criação da tabela de pagamentos
+CREATE TABLE pagamentos (
+    pagamento_id SERIAL PRIMARY KEY,
+    venda_id INT REFERENCES vendas(venda_id),
+    data_pagamento DATE,
+    valor_pago DECIMAL(10, 2),
+    metodo_pagamento VARCHAR(50)
+);
+
+-- Tabela de relacionamento entre vendas e produtos (itens da venda)
+CREATE TABLE venda_produto (
+    venda_produto_id SERIAL PRIMARY KEY,
+    venda_id INT REFERENCES vendas(venda_id),
+    produto_id INT REFERENCES produtos(produto_id),
+    quantidade INT,
+    preco DECIMAL(10, 2)
+);
