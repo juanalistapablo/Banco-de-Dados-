@@ -1,0 +1,1 @@
+drop codigo_de_barras from venda_produto
