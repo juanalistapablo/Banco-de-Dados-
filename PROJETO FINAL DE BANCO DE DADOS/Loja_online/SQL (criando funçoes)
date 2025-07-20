@@ -1,0 +1,30 @@
+-- Função para retornar o total de pagamentos de uma venda
+CREATE OR REPLACE FUNCTION total_pagamentos_venda(venda_id INT) 
+RETURNS DECIMAL AS $$
+DECLARE
+    total DECIMAL(10,2);
+BEGIN
+    SELECT SUM(valor_pago) INTO total
+    FROM pagamentos
+    WHERE venda_id = $1;
+    RETURN total;
+END;
+$$ LANGUAGE plpgsql;
+
+
+-- Função para a trigger
+CREATE OR REPLACE FUNCTION verificar_valor_pagamento() 
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.valor_pago > (SELECT valor_total FROM vendas WHERE venda_id = NEW.venda_id) THEN
+        RAISE EXCEPTION 'O valor do pagamento não pode ser maior que o valor da venda';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Criação da trigger
+CREATE TRIGGER trigger_verificar_valor_pagamento
+BEFORE INSERT ON pagamentos
+FOR EACH ROW
+EXECUTE FUNCTION verificar_valor_pagamento();
