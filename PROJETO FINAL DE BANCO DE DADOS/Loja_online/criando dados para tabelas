@@ -53,3 +53,278 @@ INSERT INTO clientes (nome, email, telefone) VALUES
 ('Bruno Rocha', 'bruno.rocha@example.com', '11987654371'),
 ('Patrícia Alves', 'patricia.alves@example.com', '11987654372'),
 ('José Fernando', 'jose.fernando@example.com', '11987654373');
+
+
+
+-- Inserindo 10 categorias na tabela categorias
+INSERT INTO categorias (nome, descricao) VALUES 
+('Eletrônicos', 'Produtos eletrônicos como celulares, computadores e acessórios'),
+('Roupas', 'Roupas masculinas, femininas e infantis'),
+('Alimentos', 'Produtos alimentícios, como alimentos frescos, enlatados e snacks'),
+('Beleza e Cuidados', 'Produtos de beleza e cuidados pessoais'),
+('Livros', 'Livros de todos os gêneros literários'),
+('Esportes', 'Produtos e equipamentos esportivos'),
+('Casa e Decoração', 'Itens de decoração e móveis para casa'),
+('Automóveis', 'Acessórios e produtos para automóveis'),
+('Saúde', 'Produtos de saúde e bem-estar'),
+('Brinquedos', 'Brinquedos e jogos para crianças');
+
+
+-- Inserindo 10 produtos na tabela produtos
+INSERT INTO produtos (nome, descricao, preco, categoria_id) VALUES 
+('Smartphone Samsung', 'Smartphone de última geração da Samsung', 2500.00, 1),  -- Categoria 1: Eletrônicos
+('Camiseta Polo', 'Camiseta polo masculina de algodão', 79.90, 2),              -- Categoria 2: Roupas
+('Arroz Integral', 'Arroz integral, pacote 5kg', 15.90, 3),                    -- Categoria 3: Alimentos
+('Shampoo L’Oréal', 'Shampoo para cabelos secos', 30.00, 4),                   -- Categoria 4: Beleza e Cuidados
+('Livro "O Hobbit"', 'Livro "O Hobbit" de J.R.R. Tolkien', 39.90, 5),            -- Categoria 5: Livros
+('Bola de Futebol', 'Bola de futebol profissional', 129.90, 6),                 -- Categoria 6: Esportes
+('Sofá de 3 lugares', 'Sofá de 3 lugares para sala de estar', 999.99, 7),        -- Categoria 7: Casa e Decoração
+('Pneu Michelin', 'Pneu Michelin para carros de passeio', 400.00, 8),            -- Categoria 8: Automóveis
+('Suplemento Vitaminas', 'Suplemento vitamínico de Cálcio e Magnésio', 49.90, 9), -- Categoria 9: Saúde
+('Bola de Futebol de Areia', 'Bola de futebol de areia profissional', 59.90, 6); -- Categoria 6: Esportes
+
+
+-- Inserindo 50 produtos na tabela produtos
+INSERT INTO produtos (nome, descricao, preco, categoria_id) VALUES 
+('Smartphone Samsung', 'Smartphone de última geração da Samsung', 2500.00, 1),
+('Camiseta Polo', 'Camiseta polo masculina de algodão', 79.90, 2),
+('Arroz Integral', 'Arroz integral, pacote 5kg', 15.90, 3),
+('Shampoo L’Oréal', 'Shampoo para cabelos secos', 30.00, 4),
+('Livro "O Hobbit"', 'Livro "O Hobbit" de J.R.R. Tolkien', 39.90, 5),
+('Bola de Futebol', 'Bola de futebol profissional', 129.90, 6),
+('Sofá de 3 lugares', 'Sofá de 3 lugares para sala de estar', 999.99, 7),
+('Pneu Michelin', 'Pneu Michelin para carros de passeio', 400.00, 8),
+('Suplemento Vitaminas', 'Suplemento vitamínico de Cálcio e Magnésio', 49.90, 9),
+('Bola de Futebol de Areia', 'Bola de futebol de areia profissional', 59.90, 6),
+
+-- Categoria 1: Eletrônicos
+('Laptop Dell', 'Laptop Dell i7 16GB RAM', 4500.00, 1),
+('Tablet Apple', 'Tablet iPad Pro 11"', 3800.00, 1),
+('Smartwatch Garmin', 'Smartwatch Garmin Forerunner 245', 1000.00, 1),
+('Fone de Ouvido JBL', 'Fones de ouvido JBL Bluetooth', 299.99, 1),
+('Câmera GoPro', 'Câmera GoPro Hero 9', 2500.00, 1),
+
+-- Categoria 2: Roupas
+('Jaqueta de Couro', 'Jaqueta de couro masculina estilo biker', 299.90, 2),
+('Vestido Floral', 'Vestido feminino floral tamanho M', 149.90, 2),
+('Tênis Nike Air', 'Tênis Nike Air Max 270', 499.90, 2),
+('Calça Jeans Levi’s', 'Calça jeans feminina Levi’s', 199.90, 2),
+('Camiseta Estampada', 'Camiseta masculina estampada, tamanho GG', 49.90, 2),
+
+-- Categoria 3: Alimentos
+('Feijão Carioca', 'Feijão carioca, pacote 1kg', 5.90, 3),
+('Macarrão Instantâneo', 'Macarrão instantâneo, pacote 5 unidades', 8.90, 3),
+('Suco de Laranja', 'Suco natural de laranja, embalagem 1L', 6.50, 3),
+('Maçã Gala', 'Maçã Gala, pacote com 1kg', 7.50, 3),
+('Chocolate ao Leite', 'Chocolate ao leite Nestlé, barra 150g', 5.90, 3),
+
+-- Categoria 4: Beleza e Cuidados
+('Perfume Dior', 'Perfume masculino Dior Sauvage', 799.00, 4),
+('Creme Nivea', 'Creme hidratante Nivea', 19.90, 4),
+('Escova de Cabelo', 'Escova de cabelo profissional', 29.90, 4),
+('Cera Depilatória', 'Cera depilatória para rosto e pernas', 39.90, 4),
+('Máscara Capilar', 'Máscara capilar profissional para cabelos danificados', 49.90, 4),
+
+-- Categoria 5: Livros
+('Dom Quixote', 'Dom Quixote, de Miguel de Cervantes', 29.90, 5),
+('1984', '1984 de George Orwell', 19.90, 5),
+('A Arte da Guerra', 'A Arte da Guerra de Sun Tzu', 15.90, 5),
+('O Senhor dos Anéis', 'O Senhor dos Anéis, J.R.R. Tolkien', 89.90, 5),
+('Harry Potter e a Pedra Filosofal', 'Harry Potter e a Pedra Filosofal, J.K. Rowling', 39.90, 5),
+
+-- Categoria 6: Esportes
+('Raquete de Tênis Wilson', 'Raquete de tênis Wilson Pro Staff', 249.90, 6),
+('Camiseta de Futebol', 'Camiseta de futebol Nike dry-fit', 99.90, 6),
+('Luvas de Boxe Everlast', 'Luvas de boxe Everlast, tamanho M', 159.90, 6),
+('Bicicleta Caloi', 'Bicicleta Caloi Sport 21 marchas', 899.00, 6),
+('Corda de Pular', 'Corda de pular profissional', 19.90, 6),
+
+-- Categoria 7: Casa e Decoração
+('Luminária de Mesa', 'Luminária de mesa em LED com 3 intensidades', 79.90, 7),
+('Quadro Decorativo', 'Quadro decorativo com moldura moderna', 149.90, 7),
+('Cortina de Sala', 'Cortina de sala, tamanho 2m', 89.90, 7),
+('Jogo de Cama', 'Jogo de cama Queen, 4 peças', 199.90, 7),
+('Aspirador de Pó', 'Aspirador de pó sem fio', 299.90, 7),
+
+-- Categoria 8: Automóveis
+('Kit de Ferramentas', 'Kit de ferramentas completo para carros', 139.90, 8),
+('Tapetes de Carro', 'Tapetes personalizados para carros', 99.90, 8),
+('Câmera de Ré', 'Câmera de ré para carros, com monitor', 229.90, 8),
+('Carregador de Carro', 'Carregador de celular para carros com 2 portas USB', 29.90, 8),
+('Óleo de Motor', 'Óleo de motor 5W30, 1 litro', 25.90, 8),
+
+-- Categoria 9: Saúde
+('Termômetro Digital', 'Termômetro digital de precisão', 39.90, 9),
+('Band-Aid', 'Band-Aid, caixa com 50 unidades', 19.90, 9),
+('Máscara N95', 'Máscara de proteção N95', 29.90, 9),
+('Kit Primeiro Socorros', 'Kit de primeiros socorros com 100 itens', 69.90, 9),
+('Suplemento Whey', 'Suplemento Whey Protein, 900g', 169.90, 9),
+
+-- Categoria 10: Brinquedos
+('Boneca Barbie', 'Boneca Barbie com acessórios', 89.90, 10),
+('Carrinho Hot Wheels', 'Carrinho Hot Wheels, modelo especial', 39.90, 10),
+('Quebra-Cabeça 1000 peças', 'Quebra-cabeça de 1000 peças, tema paisagens', 59.90, 10),
+('Jogo de Tabuleiro', 'Jogo de tabuleiro Monopoly', 119.90, 10),
+('Pelúcia Ursinho', 'Pelúcia de ursinho, tamanho grande', 79.90, 10);
+
+
+-- Inserindo 50 vendas na tabela vendas
+INSERT INTO vendas (cliente_id, data_venda, valor_total) VALUES
+(1, '2025-07-01', 2500.00),
+(2, '2025-07-02', 1200.00),
+(3, '2025-07-03', 300.00),
+(4, '2025-07-04', 4500.00),
+(5, '2025-07-05', 199.90),
+(6, '2025-07-06', 799.90),
+(7, '2025-07-07', 1500.00),
+(8, '2025-07-08', 3200.00),
+(9, '2025-07-09', 1000.00),
+(10, '2025-07-10', 50.00),
+(11, '2025-07-11', 120.00),
+(12, '2025-07-12', 900.00),
+(13, '2025-07-13', 1999.90),
+(14, '2025-07-14', 149.90),
+(15, '2025-07-15', 1800.00),
+(16, '2025-07-16', 250.00),
+(17, '2025-07-17', 2200.00),
+(18, '2025-07-18', 560.00),
+(19, '2025-07-19', 800.00),
+(20, '2025-07-20', 199.90),
+(21, '2025-07-21', 1500.00),
+(22, '2025-07-22', 220.00),
+(23, '2025-07-23', 3000.00),
+(24, '2025-07-24', 1350.00),
+(25, '2025-07-25', 170.00),
+(26, '2025-07-26', 2800.00),
+(27, '2025-07-27', 300.00),
+(28, '2025-07-28', 890.00),
+(29, '2025-07-29', 500.00),
+(30, '2025-07-30', 1200.00),
+(31, '2025-07-31', 2250.00),
+(32, '2025-08-01', 180.00),
+(33, '2025-08-02', 2200.00),
+(34, '2025-08-03', 340.00),
+(35, '2025-08-04', 850.00),
+(36, '2025-08-05', 550.00),
+(37, '2025-08-06', 2100.00),
+(38, '2025-08-07', 640.00),
+(39, '2025-08-08', 430.00),
+(40, '2025-08-09', 1900.00),
+(41, '2025-08-10', 1250.00),
+(42, '2025-08-11', 3000.00),
+(43, '2025-08-12', 800.00),
+(44, '2025-08-13', 1750.00),
+(45, '2025-08-14', 200.00),
+(46, '2025-08-15', 2700.00),
+(47, '2025-08-16', 1340.00),
+(48, '2025-08-17', 3500.00),
+(49, '2025-08-18', 600.00),
+(50, '2025-08-19', 1000.00);
+-- Inserindo 50 pagamentos na tabela pagamentos
+INSERT INTO pagamentos (venda_id, data_pagamento, valor_pago, metodo_pagamento) VALUES
+(1, '2025-07-02', 2500.00, 'Cartão de Crédito'),
+(2, '2025-07-03', 1200.00, 'Transferência Bancária'),
+(3, '2025-07-04', 300.00, 'Dinheiro'),
+(4, '2025-07-05', 4500.00, 'Cartão de Crédito'),
+(5, '2025-07-06', 199.90, 'Boleto'),
+(6, '2025-07-07', 799.90, 'Cartão de Débito'),
+(7, '2025-07-08', 1500.00, 'Transferência Bancária'),
+(8, '2025-07-09', 3200.00, 'Cartão de Crédito'),
+(9, '2025-07-10', 1000.00, 'Dinheiro'),
+(10, '2025-07-11', 50.00, 'Boleto'),
+(11, '2025-07-12', 120.00, 'Cartão de Débito'),
+(12, '2025-07-13', 900.00, 'Transferência Bancária'),
+(13, '2025-07-14', 1999.90, 'Cartão de Crédito'),
+(14, '2025-07-15', 149.90, 'Dinheiro'),
+(15, '2025-07-16', 1800.00, 'Boleto'),
+(16, '2025-07-17', 250.00, 'Cartão de Débito'),
+(17, '2025-07-18', 2200.00, 'Transferência Bancária'),
+(18, '2025-07-19', 560.00, 'Cartão de Crédito'),
+(19, '2025-07-20', 800.00, 'Dinheiro'),
+(20, '2025-07-21', 199.90, 'Boleto'),
+(21, '2025-07-22', 1500.00, 'Cartão de Débito'),
+(22, '2025-07-23', 220.00, 'Transferência Bancária'),
+(23, '2025-07-24', 3000.00, 'Cartão de Crédito'),
+(24, '2025-07-25', 1350.00, 'Dinheiro'),
+(25, '2025-07-26', 170.00, 'Boleto'),
+(26, '2025-07-27', 2800.00, 'Cartão de Débito'),
+(27, '2025-07-28', 300.00, 'Transferência Bancária'),
+(28, '2025-07-29', 890.00, 'Cartão de Crédito'),
+(29, '2025-07-30', 500.00, 'Dinheiro'),
+(30, '2025-07-31', 1200.00, 'Boleto'),
+(31, '2025-08-01', 2250.00, 'Cartão de Débito'),
+(32, '2025-08-02', 180.00, 'Transferência Bancária'),
+(33, '2025-08-03', 2200.00, 'Cartão de Crédito'),
+(34, '2025-08-04', 340.00, 'Dinheiro'),
+(35, '2025-08-05', 850.00, 'Boleto'),
+(36, '2025-08-06', 550.00, 'Cartão de Débito'),
+(37, '2025-08-07', 2100.00, 'Transferência Bancária'),
+(38, '2025-08-08', 640.00, 'Cartão de Crédito'),
+(39, '2025-08-09', 430.00, 'Dinheiro'),
+(40, '2025-08-10', 1900.00, 'Boleto'),
+(41, '2025-08-11', 1250.00, 'Cartão de Débito'),
+(42, '2025-08-12', 3000.00, 'Transferência Bancária'),
+(43, '2025-08-13', 800.00, 'Cartão de Crédito'),
+(44, '2025-08-14', 1750.00, 'Dinheiro'),
+(45, '2025-08-15', 200.00, 'Boleto'),
+(46, '2025-08-16', 2700.00, 'Cartão de Débito'),
+(47, '2025-08-17', 1340.00, 'Transferência Bancária'),
+(48, '2025-08-18', 3500.00, 'Cartão de Crédito'),
+(49, '2025-08-19', 600.00, 'Dinheiro'),
+(50, '2025-08-20', 1000.00, 'Boleto');
+
+-- Inserindo 50 itens na tabela venda_produto
+INSERT INTO venda_produto (venda_id, produto_id, quantidade, preco) VALUES
+(1, 1, 1, 2500.00),  -- Venda 1: Produto 1 (Smartphone Samsung)
+(1, 2, 2, 79.90),    -- Venda 1: Produto 2 (Camiseta Polo)
+(2, 3, 3, 15.90),    -- Venda 2: Produto 3 (Arroz Integral)
+(2, 4, 1, 30.00),    -- Venda 2: Produto 4 (Shampoo L'Oréal)
+(3, 5, 1, 39.90),    -- Venda 3: Produto 5 (Livro "O Hobbit")
+(3, 6, 5, 129.90),   -- Venda 3: Produto 6 (Bola de Futebol)
+(4, 7, 1, 999.99),   -- Venda 4: Produto 7 (Sofá de 3 lugares)
+(5, 8, 1, 400.00),   -- Venda 5: Produto 8 (Pneu Michelin)
+(6, 9, 3, 49.90),    -- Venda 6: Produto 9 (Suplemento Vitaminas)
+(7, 10, 2, 59.90),   -- Venda 7: Produto 10 (Bola de Futebol de Areia)
+(8, 11, 1, 2500.00), -- Venda 8: Produto 11 (Laptop Dell)
+(9, 12, 2, 3800.00), -- Venda 9: Produto 12 (Tablet Apple)
+(10, 13, 1, 1000.00),-- Venda 10: Produto 13 (Smartwatch Garmin)
+(11, 14, 2, 299.99), -- Venda 11: Produto 14 (Fone de Ouvido JBL)
+(12, 15, 1, 2500.00),-- Venda 12: Produto 15 (Câmera GoPro)
+(13, 16, 3, 299.90), -- Venda 13: Produto 16 (Jaqueta de Couro)
+(14, 17, 1, 149.90), -- Venda 14: Produto 17 (Vestido Floral)
+(15, 18, 2, 499.90), -- Venda 15: Produto 18 (Tênis Nike Air)
+(16, 19, 1, 199.90), -- Venda 16: Produto 19 (Calça Jeans Levi's)
+(17, 20, 1, 49.90),  -- Venda 17: Produto 20 (Camiseta Estampada)
+(18, 21, 2, 5.90),   -- Venda 18: Produto 21 (Feijão Carioca)
+(19, 22, 5, 8.90),   -- Venda 19: Produto 22 (Macarrão Instantâneo)
+(20, 23, 2, 6.50),   -- Venda 20: Produto 23 (Suco de Laranja)
+(21, 24, 1, 7.50),   -- Venda 21: Produto 24 (Maçã Gala)
+(22, 25, 3, 5.90),   -- Venda 22: Produto 25 (Chocolate ao Leite)
+(23, 26, 1, 799.00), -- Venda 23: Produto 26 (Perfume Dior)
+(24, 27, 3, 19.90),  -- Venda 24: Produto 27 (Creme Nivea)
+(25, 28, 1, 29.90),  -- Venda 25: Produto 28 (Escova de Cabelo)
+(26, 29, 2, 39.90),  -- Venda 26: Produto 29 (Cera Depilatória)
+(27, 30, 1, 49.90),  -- Venda 27: Produto 30 (Máscara Capilar)
+(28, 31, 1, 29.90),  -- Venda 28: Produto 31 (Perfume masculino Dior Sauvage)
+(29, 32, 1, 19.90),  -- Venda 29: Produto 32 (Band-Aid)
+(30, 33, 1, 29.90),  -- Venda 30: Produto 33 (Máscara N95)
+(31, 34, 1, 69.90),  -- Venda 31: Produto 34 (Kit Primeiro Socorros)
+(32, 35, 2, 169.90), -- Venda 32: Produto 35 (Suplemento Whey)
+(33, 36, 1, 89.90),  -- Venda 33: Produto 36 (Boneca Barbie)
+(34, 37, 1, 39.90),  -- Venda 34: Produto 37 (Carrinho Hot Wheels)
+(35, 38, 3, 59.90),  -- Venda 35: Produto 38 (Quebra-Cabeça 1000 peças)
+(36, 39, 1, 119.90), -- Venda 36: Produto 39 (Jogo de Tabuleiro)
+(37, 40, 1, 79.90),  -- Venda 37: Produto 40 (Pelúcia Ursinho)
+(38, 41, 2, 2500.00),-- Venda 38: Produto 41 (Smartphone Samsung)
+(39, 42, 1, 79.90),  -- Venda 39: Produto 42 (Camiseta Polo)
+(40, 43, 3, 15.90),  -- Venda 40: Produto 43 (Arroz Integral)
+(41, 44, 1, 30.00),  -- Venda 41: Produto 44 (Shampoo L'Oréal)
+(42, 45, 2, 39.90),  -- Venda 42: Produto 45 (Livro "O Hobbit")
+(43, 46, 1, 129.90), -- Venda 43: Produto 46 (Bola de Futebol)
+(44, 47, 1, 999.99), -- Venda 44: Produto 47 (Sofá de 3 lugares)
+(45, 48, 1, 400.00), -- Venda 45: Produto 48 (Pneu Michelin)
+(46, 49, 3, 49.90),  -- Venda 46: Produto 49 (Suplemento Vitaminas)
+(47, 50, 2, 59.90),  -- Venda 47: Produto 50 (Bola de Futebol de Areia)
+(48, 1, 2, 2500.00), -- Venda 48: Produto 1 (Smartphone Samsung)
+(49, 2, 1, 79.90),   -- Venda 49: Produto 2 (Camiseta Polo)
+(50, 3, 4, 15.90);   -- Venda 50: Produto 3 (Arroz Integral)
