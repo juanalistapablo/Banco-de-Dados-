@@ -1,0 +1,59 @@
+
+SELECT * FROM clientes;
+SELECT * FROM clientes WHERE cliente_id = 1;
+
+
+SELECT * FROM categorias;
+SELECT * FROM categorias WHERE categoria_id = 1;
+
+
+SELECT * FROM produtos;
+SELECT * FROM produtos WHERE categoria_id = 1;
+
+
+SELECT * FROM vendas;
+SELECT * FROM vendas WHERE cliente_id = 1;
+
+
+SELECT * FROM pagamentos;
+SELECT * FROM pagamentos WHERE venda_id = 1;
+
+
+SELECT * FROM venda_produto;
+SELECT * FROM venda_produto WHERE venda_id = 1;
+
+
+
+-- Soma do valor das vendas por categoria de produto ( CONSUTA USANDO FUNÇAO AGREGADA )
+SELECT
+    c.nome AS categoria,
+    SUM(vp.quantidade * vp.preco) AS total_vendas
+FROM
+    categorias c
+JOIN
+    produtos p ON c.categoria_id = p.categoria_id
+JOIN
+    venda_produto vp ON p.produto_id = vp.produto_id
+JOIN
+    vendas v ON vp.venda_id = v.venda_id
+GROUP BY
+    c.categoria_id;
+
+
+
+-- Filtro de categorias com vendas acima de 1000 (HAVING)
+SELECT
+    c.nome AS categoria,
+    SUM(vp.quantidade * vp.preco) AS total_vendas
+FROM
+    categorias c
+JOIN
+    produtos p ON c.categoria_id = p.categoria_id
+JOIN
+    venda_produto vp ON p.produto_id = vp.produto_id
+JOIN
+    vendas v ON vp.venda_id = v.venda_id
+GROUP BY
+    c.categoria_id
+HAVING
+    SUM(vp.quantidade * vp.preco) > 1000;
