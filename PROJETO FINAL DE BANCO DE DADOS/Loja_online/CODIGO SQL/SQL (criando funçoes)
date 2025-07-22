@@ -1,15 +1,28 @@
--- Função para retornar o total de pagamentos de uma venda
-CREATE OR REPLACE FUNCTION total_pagamentos_venda(venda_id INT) 
+--calcular o valor total de pagamentos realizados para uma venda específica
+
+CREATE OR REPLACE FUNCTION total_pagamentos_venda(venda_id_param INT) 
 RETURNS DECIMAL AS $$
 DECLARE
     total DECIMAL(10,2);
 BEGIN
-    SELECT SUM(valor_pago) INTO total
-    FROM pagamentos
-    WHERE venda_id = $1;
+    -- Usando a variável 'venda_id_param' para evitar ambiguidade
+    SELECT SUM(p.valor_pago) INTO total
+    FROM pagamentos p
+    WHERE p.venda_id = venda_id_param;  -- Agora a variável 'venda_id_param' está sendo usada
+
+    -- Caso não haja pagamentos, retornar 0
+    IF total IS NULL THEN
+        RETURN 0;
+    END IF;
+
     RETURN total;
 END;
 $$ LANGUAGE plpgsql;
+
+
+
+SELECT total_pagamentos_venda(2);  -- Substitua '1' pelo ID da venda que você deseja verificar
+
 
 
 -- Função para a trigger
