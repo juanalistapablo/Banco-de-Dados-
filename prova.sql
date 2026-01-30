@@ -1,4 +1,13 @@
+/* 1 Prova da Entrevista de SQL da Microsoft*/
+SELECT 
+COUNT(content),
+sender_id
+FROM microsoft_sql_teams_messages
+GROUP BY  sender_id
+ORDER BY sender_id DESC
+LIMIT 2
 
+/*2 Amazon*/
 SELECT 
     MONTH(data_avaliacao) AS mes,
     product_id,
@@ -11,7 +20,7 @@ GROUP BY
 ORDER BY 
     mes, 
     product_id;
-
+/*3 Prova da Entrevista de SQL da Tesla*/
 SELECT 
     part, 
     assembly_step
@@ -20,7 +29,7 @@ FROM
 WHERE 
     finish_date IS NULL;
 
-/*Prova da Entrevista de SQL da J.P Morgan Chase*/
+/* 4 Prova da Entrevista de SQL da J.P Morgan Chase*/
 SELECT 
 card_name,
 MAX(issued_amount) - MIN(issued_amount) difference
@@ -35,14 +44,14 @@ WHERE email_id in(
     FROM texts
     WHERE texts.signup_action = 'Not confirmed'
 )
-/*Prova da Entrevista de SQL do Linkedin*/
+/* 6 Prova da Entrevista de SQL do Linkedin*/
 SELECT  
 COUNT(title)-1 duplicate_companies
 FROM job_listings
 GROUP BY description
 HAVING COUNT(title)-1 >=1
     
-/*    Prova da Entrevista de SQL do Quickbooks*/
+/*  7  Prova da Entrevista de SQL do Quickbooks*/
 
 
 SELECT 
