@@ -35,3 +35,17 @@ WHERE email_id in(
     FROM texts
     WHERE texts.signup_action = 'Not confirmed'
 )
+/*Prova da Entrevista de SQL do Linkedin*/
+SELECT  
+COUNT(title)-1 duplicate_companies
+FROM job_listings
+GROUP BY description
+HAVING COUNT(title)-1 >=1
+    
+/*    Prova da Entrevista de SQL do Quickbooks*/
+
+
+SELECT 
+    COUNT(CASE WHEN product LIKE '%TurboTax%' THEN 1 END) AS turbotax_total,
+    COUNT(CASE WHEN product LIKE '%QuickBooks%' THEN 1 END) AS livros_rapidos_total
+FROM filed_taxes;
