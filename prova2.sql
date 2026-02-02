@@ -16,3 +16,13 @@ JOIN age_breakdown a
 ON t1.user_id = a.user_id;
 
 /* 2  Prova da Entrevista de SQL da Advent Health Hospitals Orlando */
+
+SELECT
+count(policy_holder_id) policy_holder_count
+FROM
+(SELECT 
+policy_holder_id,
+count(case_id) 
+FROM callers
+GROUP BY policy_holder_id
+HAVING count(case_id) >= 3)t1
