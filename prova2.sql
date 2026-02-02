@@ -14,3 +14,5 @@ FROM (
 ) t1
 JOIN age_breakdown a 
 ON t1.user_id = a.user_id;
+
+/* 2  Prova da Entrevista de SQL da Advent Health Hospitals Orlando */
