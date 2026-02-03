@@ -4,7 +4,7 @@ COUNT(content),
 sender_id
 FROM microsoft_sql_teams_messages
 GROUP BY  sender_id
-ORDER BY sender_id DESC
+ORDER BY COUNT(content) DESC
 LIMIT 2
 
 /*2 Amazon*/
