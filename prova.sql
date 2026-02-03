@@ -1,10 +1,10 @@
 /* 1 Prova da Entrevista de SQL da Microsoft*/
 SELECT 
-COUNT(content),
+COUNT(content) menssage_count,
 sender_id
 FROM microsoft_sql_teams_messages
 GROUP BY  sender_id
-ORDER BY COUNT(content) DESC
+ORDER BY menssage_count DESC
 LIMIT 2
 
 /*2 Amazon*/
